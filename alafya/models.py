@@ -46,3 +46,18 @@ class StudentBooking(models.Model):
     timeToBeUsedFrom = models.TimeField(null=True)
     #status = models.CharField(max_length = 200, null = True, choices = STATUS)
     date_created = models.DateTimeField(auto_now_add = True, null=True)
+
+
+class StaffBooking(models.Model):
+    STATUS = (
+       ('Pending', 'Pending'),
+       ('Approved', 'Approved'),
+      ('Rejected', 'Rejected'),
+     )
+
+    student = models.ForeignKey(settings.AUTH_USER_MODEL.objects.filter(is_staff = False), null = True, on_delete = models.SET_NULL)
+    reason = models.CharField(null=True, max_length=255)
+    date = models.DateField(null = True)
+    bookingTime = models.TimeField(null=True)
+    bookingStatus = models.CharField(max_length = 200, null = True, choices = STATUS)
+    date_created = models.DateTimeField(auto_now_add = True, null=True)
