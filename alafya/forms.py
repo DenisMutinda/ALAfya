@@ -8,8 +8,8 @@ from alafya.models import *
 
 class CreateUserForm(UserCreationForm):
     class Meta:
-        model  = settings.AUTH_USER_MODEL
-        fields = ['first_name','last_name','hall', 'year_group', 'email', 'password1', 'password2']
+        model  = User
+        fields = ['first_name','last_name', 'email', 'password1', 'password2']
 
 
 class StudentBookingForm(ModelForm):
@@ -21,5 +21,11 @@ class StudentBookingForm(ModelForm):
 class StaffBookingForm(ModelForm):
     class Meta:
         model = StaffBooking
+        fields = '__all__'
+
+
+class ProfileForm(ModelForm):
+    class Meta:
+        model = Profile
         fields = '__all__'
 

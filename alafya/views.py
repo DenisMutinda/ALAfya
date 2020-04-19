@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.conf import settings
+from django.contrib.auth import get_user_model as user_model
 from django.http import HttpResponse, Http404
 from django.template import loader
 from django.contrib.auth.forms import UserCreationForm

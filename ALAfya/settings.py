@@ -55,7 +55,7 @@ ROOT_URLCONF = 'ALAfya.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['BASE_DIR/alafya/templates',],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -116,7 +116,7 @@ USE_TZ = True
 
 
 #self-defined settings
-AUTH_USER_MODEL = 'alafya.User'
+#AUTH_USER_MODEL = 'alafya.User'
 
 
 # Static files (CSS, JavaScript, Images)

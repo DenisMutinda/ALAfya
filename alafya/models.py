@@ -1,14 +1,14 @@
 from django.db import models
-from django.contrib.auth import User 
-from django.contrib.auth.models import AbstractUser
-from django.conf import settings
+from django.contrib.auth.models import User
+#from django.contrib.auth import get_user_model as user_model
+#from django.conf import settings
 
 
 # Create your models here.
 
 #extend the user model
 
-class User(AbstractUser):
+class Profile(models.Model):
 
     HALL_CHOICES = (
         ('Olympus','Olympus'),
@@ -29,9 +29,12 @@ class User(AbstractUser):
         ('Year 1', 'Year 1'),
         ('Year 2', 'Year 2'),
     )
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
     hall = models.CharField(max_length = 50, choices = HALL_CHOICES)
     year_group = models.CharField(max_length = 50, choices= YEAR_GROUP)
 
+
+#student booking
 class StudentBooking(models.Model):
     #STATUS = (
      #  ('Pending', 'Pending'),
@@ -40,7 +43,7 @@ class StudentBooking(models.Model):
     #)
 
     #customer = models.ForeignKey(Customer, null = True, on_delete = models.SET_NULL)
-    counsellor = models.ForeignKey(settings.AUTH_USER_MODEL.objects.filter(is_staff = True), null = True, on_delete = models.SET_NULL)
+    counsellor = models.ForeignKey(User, null = True, on_delete = models.CASCADE)
     reason = models.CharField(null=True, max_length=255)
     date = models.DateField(null = True)
     timeToBeUsedFrom = models.TimeField(null=True)
@@ -48,6 +51,7 @@ class StudentBooking(models.Model):
     date_created = models.DateTimeField(auto_now_add = True, null=True)
 
 
+#staff booking
 class StaffBooking(models.Model):
     STATUS = (
        ('Pending', 'Pending'),
@@ -55,7 +59,7 @@ class StaffBooking(models.Model):
       ('Rejected', 'Rejected'),
      )
 
-    student = models.ForeignKey(settings.AUTH_USER_MODEL.objects.filter(is_staff = False), null = True, on_delete = models.SET_NULL)
+    student = models.ForeignKey(User, null = True, on_delete = models.CASCADE)
     reason = models.CharField(null=True, max_length=255)
     date = models.DateField(null = True)
     bookingTime = models.TimeField(null=True)
