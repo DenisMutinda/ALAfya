@@ -9,7 +9,7 @@ from alafya.models import *
 class CreateUserForm(UserCreationForm):
     class Meta:
         model  = settings.AUTH_USER_MODEL
-        fields = ['first_name','last_name','hall', 'year_group', 'username', 'email', 'password1', 'password2']
+        fields = ['first_name','last_name','hall', 'year_group', 'email', 'password1', 'password2']
 
 
 class StudentBookingForm(ModelForm):
