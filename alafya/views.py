@@ -13,21 +13,26 @@ from django.contrib import messages
 
 # Create your views here.
 
+@login_required
 def profile(request):
     context = {}
     return render(request, 'home.html', context)
 
 
 def login(request):
-    pass
+    context = {}
+    return render(request, 'login.html', context)
 
 
 def SignUp(request):
-    pass
+    context = {}
+    return render(request, 'signup.html', context)
 
+@login_required
 def StudentBooking(request):
     pass
 
+@login_required
 def StaffBooking(request):
     pass
 
