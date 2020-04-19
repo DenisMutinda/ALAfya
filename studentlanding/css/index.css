@@ -1,0 +1,60 @@
+.navbar-custom {
+    background-color: #800000;
+}
+
+/* change the brand and text color */
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+    color: #123e12;
+}
+
+/* change the link color */
+.navbar-custom .navbar-nav .nav-link {
+    color: #c0c0c2;;
+}
+
+/* change the color of active or hovered links */
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+    color: #dde007;
+}
+
+body{
+   background-color: #f0f0f0; 
+}
+
+.card-custom{
+    border-radius: 0px;
+    box-shadow: 5px 5px 15px #f2f52f;
+    transition: all 0.3s ease-in;
+    -webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+}
+
+.card-custom:hover{
+    background-color: #f2f52f;
+    color: #380303;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 5px 5px 15px #800000;
+}
+
+.btn{
+    border: 1px solid #800000;
+    background: #f2f52f;
+    padding: 10px 20px;
+    color: #800000;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 10px;
+    transition: 0.8s;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn:hover{
+    border: 1px solid  #800000;
+    background: #800000;
+    color: #c0c0c2;
+
+}
