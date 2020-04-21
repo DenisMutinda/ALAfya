@@ -6,6 +6,8 @@ from alafya import views
 
 
 urlpatterns = [
-    path('', views.SignUp),
-    path('login', views.login),
+    path('', views.SignUp, name = "signup"),
+    path('login', views.login, name = "login"),
+    path('home/', views.profile, name = "home"),
+    path('booking/', views.StudentBooking, name = 'StjdentBooking'),
 ]

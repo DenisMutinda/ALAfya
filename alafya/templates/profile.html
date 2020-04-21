@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="container" id="main">
+    <div class="container">
+        <div class="row">
+            <div class="card-deck">
+                <div class="card card-custom" style="margin-bottom: 45px;">
+                  <div class="card-body text-center">
+                    <img src={% static "img/Stacey.jpg" %} alt="Stacey Lee Watson" class="img-fluid rounded-circle w-50 mb-3" style="margin-top: -50px; height: 100px;">
+                    <h3>Stacey Lee Watson</h3>
+                    <h5>Yewan Counsellor</h5>
+                    <p>Wellness Teacher</p>
+                    <a href="#" class="btn" role="button">Book Counsellor</a>
+                  </div>
+                </div>
+                <div class="card card-custom" style="margin-bottom: 45px;">
+                    <div class="card-body text-center">
+                      <img src={% static "img/Sammy.jpg" %} alt="Stacey Lee Watson" class="img-fluid rounded-circle w-50 mb-3" style="margin-top: -50px; height: 100px;">
+                      <h3>Sammy</h3>
+                      <h5>Yetu Counsellor</h5>
+                      <p>Simjui</p>
+                      <a href="#" class="btn" role="button">Book Counsellor</a>
+                    </div>
+                </div>
+                <div class="card card-custom" style="margin-bottom: 45px;">
+                    <div class="card-body text-center">
+                      <img src={% static "img/Mandisa.jpg" %} alt="Stacey Lee Watson" class="img-fluid rounded-circle w-50 mb-3" style="margin-top: -50px; height: 100px;">
+                      <h3>Mandisa</h3>
+                      <h5>School Counsellor</h5>
+                      <p>Oldest</p>
+                      <a href="#" class="btn" role="button">Book Counsellor</a>
+                    </div>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
+
+<!-- Tabs -->
+<div class="container">
+    <section id="tabs">
+        <div class="row">
+            <div class="col-sm-12 ">
+                <nav id="tabs-bookings">
+                    <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                        <a class="nav-item nav-link active" id="nav-upcoming-tab" data-toggle="tab" href="#upcoming" role="tab" aria-controls="nav-upcoming" aria-selected="true">Upcoming Meet-ups</a>
+                        <a class="nav-item nav-link" id="nav-history-tab" data-toggle="tab" href="#history" role="tab" aria-controls="nav-history" aria-selected="false">Previous Meetings</a>
+                        <a class="nav-item nav-link" id="nav-contact-tab"  href="booking.html" role="tab" aria-controls="nav-contact" aria-selected="false">Book a session</a>
+                    </div>
+                </nav>
+                    <div class="container">
+                        <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="upcoming" role="tabpanel" aria-labelledby="nav-upcoming-tab">
+                                <p>
+                                    Insert Data here about previous meetings
+                                </p>
+                            </div>
+                            <div class="tab-pane fade" id="history" role="tabpanel" aria-labelledby="nav-history-tab">
+                                Insert Data here about previous meetings
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+</div>
+<!-- ./Tabs -->
+
+{% endblock %}

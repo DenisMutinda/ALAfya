@@ -12,10 +12,11 @@ from django.contrib import messages
 
 # Create your views here.
 
-@login_required
 def profile(request):
-    context = {}
-    return render(request, 'home.html', context)
+    context = {
+        "title": "home",
+    }
+    return render(request, 'profile.html', context)
 
 
 def login(request):
@@ -24,14 +25,19 @@ def login(request):
 
 
 def SignUp(request):
+    form = UserCreationForm()
     context = {
         'title': 'Signup',
     }
     return render(request, 'signup.html', context)
 
-@login_required
+
 def StudentBooking(request):
-    pass
+    context = {
+        "title" : "Student Booking",
+    }
+
+    return render(request, "booking.html", context)
 
 @login_required
 def StaffBooking(request):
