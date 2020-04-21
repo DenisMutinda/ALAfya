@@ -2,12 +2,11 @@
     background-color: #800000;
 }
 
-/* change the brand and text color 
+/* change the brand and text color */
 .navbar-custom .navbar-brand,
 .navbar-custom .navbar-text {
     color: #123e12;
 }
-*/
 
 /* change the link color */
 .navbar-custom .navbar-nav .nav-link {
@@ -17,7 +16,7 @@
 /* change the color of active or hovered links */
 .navbar-custom .nav-item.active .nav-link,
 .navbar-custom .nav-item:hover .nav-link {
-    color: #dde007;
+    color: #f2f52f;
 }
 
 body{
@@ -101,3 +100,17 @@ section .section-title {
 #tabs-bookings{
     background: #800000;
 }
+
+.footer{
+    background-color: #800000;
+    color: #f0f0f0;
+}
+
+#footer-row{
+    padding-top: 20px;
+}
+
+.footer-copyright{
+    background-color: #810c0c;
+}
+

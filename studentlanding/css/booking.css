@@ -1,0 +1,86 @@
+.navbar-custom {
+    background-color: #800000;
+}
+
+/* change the link color */
+.navbar-custom .navbar-nav .nav-link {
+    color: #c0c0c2;;
+}
+
+/* change the color of active or hovered links */
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+    color: #f2f52f;
+}
+
+body{
+   background-color: #f0f0f0; 
+}
+
+.footer{
+    background-color: #800000;
+    color: #f0f0f0;
+}
+
+#footer-row{
+    padding-top: 20px;
+}
+
+.footer-copyright{
+    background-color: #810c0c;
+}
+
+/*  Forms styling   */
+
+/* Card*/
+.card-header{
+    background-color: #800000 !important;
+    color: #f2f52f;
+}
+
+/*  Button  */
+.button {
+    background: #f2f52f;
+    border: 2px solid #800000;
+    color: #800000;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: 0.8s;
+    position: relative;
+    overflow: hidden;
+}
+
+.button:hover{
+    border: 2px solid  #f2f52f;
+    background: #800000;
+    color: #f2f52f;
+    text-decoration: none;
+}
+
+/* Date Picker Customisation*/
+.dtp .dtp-date-view .dtp-header{
+    background: #800000;
+    color: #fff;
+}
+
+.dtp .dtp-date {
+    background: #800000;
+    color: #fff;
+}
+
+.dtp table.dtp-picker-days tr>td>a.selected{
+    background: #800000;
+    color: #fff;
+}
+
+.btn.btn-outline-primary{
+    background: #800000;
+    color: #fff;
+    border-radius: 50px;
+}
